@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Felicitare de Ziua Îndrăgostiților</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffccd5;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff5c5c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .no:hover {
+            transform: scale(1.3);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Urs dragalas cu trandafiri">
+    <h1>Ai vrea sa te bulesc?</h1>
+    <button class="yes">Da</button>
+    <button id="noButton" class="no">Nu</button>
+    <script>
+      document.querySelector('.yes').addEventListener('click', function() {
+          alert('Yay! 😊');
+      });
+
+      var noButton = document.getElementById('noButton');
+      noButton.addEventListener('mouseover', function() {
+          var randomX = Math.floor(Math.random() * window.innerWidth);
+          var randomY = Math.floor(Math.random() * window.innerHeight);
+          this.style.left = randomX + 'px';
+          this.style.top = randomY + 'px';
+      });
+  </script>
+</body>
+</html>
